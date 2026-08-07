@@ -1,7 +1,40 @@
 [gd_scene format=3 uid="uid://bmgy8kg1qyo1x"]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0rv2u"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1wu55"]
+animations = [{
+"frames": [],
+"loop": 1,
+"name": &"atack",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"fall",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"jump",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"moving",
+"speed": 5.0
+}]
+
 [node name="You" type="CharacterBody2D" unique_id=2131732850]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=454512905]
+shape = SubResource("CapsuleShape2D_0rv2u")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D" unique_id=869960685]
+sprite_frames = SubResource("SpriteFrames_1wu55")
+animation = &"atack"
