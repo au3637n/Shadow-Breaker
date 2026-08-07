@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://bmgy8kg1qyo1x"]
 
+[ext_resource type="Script" uid="uid://ccvqvfyn7cilx" path="res://Scripts/moviment_script.gd" id="1_1wu55"]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0rv2u"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1wu55"]
@@ -31,6 +33,7 @@ animations = [{
 }]
 
 [node name="You" type="CharacterBody2D" unique_id=2131732850]
+script = ExtResource("1_1wu55")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=454512905]
 shape = SubResource("CapsuleShape2D_0rv2u")
