@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="Shadow Breaker"
+run/main_scene="uid://bmgy8kg1qyo1x"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 

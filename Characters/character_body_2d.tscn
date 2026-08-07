@@ -1,12 +1,57 @@
 [gd_scene format=3 uid="uid://bmgy8kg1qyo1x"]
 
 [ext_resource type="Script" uid="uid://ccvqvfyn7cilx" path="res://Scripts/moviment_script.gd" id="1_1wu55"]
+[ext_resource type="Texture2D" uid="uid://bgqkd8sdm8a48" path="res://Assets/Soldier/Soldier_Attack01.png" id="2_6ldss"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0rv2u"]
+radius = 9.0
+height = 24.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fmj6"]
+atlas = ExtResource("2_6ldss")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1sodm"]
+atlas = ExtResource("2_6ldss")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c472b"]
+atlas = ExtResource("2_6ldss")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_anxv6"]
+atlas = ExtResource("2_6ldss")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dv44n"]
+atlas = ExtResource("2_6ldss")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3pfma"]
+atlas = ExtResource("2_6ldss")
+region = Rect2(500, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_1wu55"]
 animations = [{
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fmj6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1sodm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c472b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_anxv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dv44n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3pfma")
+}],
 "loop": 1,
 "name": &"atack",
 "speed": 5.0
