@@ -1,11 +1,8 @@
 [gd_scene format=3 uid="uid://bmgy8kg1qyo1x"]
 
-[ext_resource type="Script" uid="uid://ccvqvfyn7cilx" path="res://Scripts/moviment_script.gd" id="1_1wu55"]
+[ext_resource type="Script" uid="uid://br06fs84n3hba" path="res://Scripts/Moviment_2d.gd" id="1_6ldss"]
 [ext_resource type="Texture2D" uid="uid://bgqkd8sdm8a48" path="res://Assets/Soldier/Soldier_Attack01.png" id="2_6ldss"]
-
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0rv2u"]
-radius = 9.0
-height = 24.0
+[ext_resource type="Texture2D" uid="uid://b2wsrrlo5cpys" path="res://Assets/Soldier/Soldier_Walk.png" id="3_4fmj6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4fmj6"]
 atlas = ExtResource("2_6ldss")
@@ -31,6 +28,38 @@ region = Rect2(400, 0, 100, 100)
 atlas = ExtResource("2_6ldss")
 region = Rect2(500, 0, 100, 100)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_ou27f"]
+atlas = ExtResource("3_4fmj6")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4gfr"]
+atlas = ExtResource("3_4fmj6")
+region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7pex"]
+atlas = ExtResource("3_4fmj6")
+region = Rect2(200, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3iilw"]
+atlas = ExtResource("3_4fmj6")
+region = Rect2(300, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_45oxw"]
+atlas = ExtResource("3_4fmj6")
+region = Rect2(400, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xhrw"]
+atlas = ExtResource("3_4fmj6")
+region = Rect2(500, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ol211"]
+atlas = ExtResource("3_4fmj6")
+region = Rect2(600, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ngk8h"]
+atlas = ExtResource("3_4fmj6")
+region = Rect2(700, 0, 100, 100)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_1wu55"]
 animations = [{
 "frames": [{
@@ -52,9 +81,9 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_3pfma")
 }],
-"loop": 1,
+"loop": 0,
 "name": &"atack",
-"speed": 6.0
+"speed": 5.0
 }, {
 "frames": [],
 "loop": 1,
@@ -71,18 +100,48 @@ animations = [{
 "name": &"jump",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ou27f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4gfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7pex")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3iilw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_45oxw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xhrw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ol211")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ngk8h")
+}],
 "loop": 1,
 "name": &"moving",
 "speed": 5.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_anxv6"]
+radius = 6.0
+height = 20.0
+
 [node name="You" type="CharacterBody2D" unique_id=2131732850]
-script = ExtResource("1_1wu55")
+script = ExtResource("1_6ldss")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=454512905]
-shape = SubResource("CapsuleShape2D_0rv2u")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CollisionShape2D" unique_id=869960685]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=869960685]
+position = Vector2(0, 2)
 sprite_frames = SubResource("SpriteFrames_1wu55")
 animation = &"atack"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=454512905]
+top_level = true
+shape = SubResource("CapsuleShape2D_anxv6")
