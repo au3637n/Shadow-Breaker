@@ -1,3 +1,11 @@
 [gd_scene format=3 uid="uid://bbhrge3xspc6o"]
 
-[node name="Node2D" type="Node2D" unique_id=1819459909]
+[node name="Node2D" type="Node2D" unique_id=298439561]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=376286581]
+
+[node name="Node2D" type="Node2D" parent="CharacterBody2D" unique_id=541524712]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="CharacterBody2D" unique_id=824229777]
+
+[node name="Node2D" type="Node2D" parent="." unique_id=1265306145]
