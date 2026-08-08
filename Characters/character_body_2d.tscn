@@ -145,3 +145,5 @@ animation = &"atack"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=454512905]
 top_level = true
 shape = SubResource("CapsuleShape2D_anxv6")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1499080437]
