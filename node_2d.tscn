@@ -5,3 +5,4 @@
 [node name="Node2D" type="Node2D" unique_id=298439561]
 
 [node name="You" parent="." unique_id=2131732850 instance=ExtResource("1_wtcfe")]
+position = Vector2(0, -1)
