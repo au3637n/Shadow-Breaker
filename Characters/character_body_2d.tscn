@@ -194,18 +194,42 @@ gradient = SubResource("Gradient_c472b")
 [sub_resource type="GDScript" id="GDScript_anxv6"]
 resource_name = "life"
 script/source = "extends TextureProgressBar
-@export var player = Node2D
-@export var regen_rate: float = 1.0
-@export var regen_delay: float = 3.0
-# Called when the node enters the scene tree for the first time.
+
+
+@export var max_health: float = 100.0
+@export var regen_rate: float = 1.0   # Vida recuperada por segundo
+@export var regen_delay: float = 3.0  # Tempo em segundos sem tomar dano para iniciar a regeneração
+func _on_attack_area_body_entered(body: Node2D) -> void:
+	if body.has_method(\"take_damage\"):
+		body.take_damage(5.0) # Quantidade de dano provocada
+var current_health: float
+var time_since_last_hit: float = 0.0
+
+signal health_changed(new_health)
+signal died
+
 func _ready() -> void:
-	pass # Replace with function body.
+	current_health = max_health
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	max_value = player.maxHp
-	value = player.hp
+	time_since_last_hit += delta
+
+	# Regenera se o tempo de espera passou e o HP ainda não atingiu o máximo
+	if time_since_last_hit >= regen_delay and current_health < max_health:
+		current_health = min(max_health, current_health + (regen_rate * delta))
+		health_changed.emit(current_health)
+
+func take_damage(amount: float) -> void:
+	current_health -= amount
+	time_since_last_hit = 0.0  # Reinicia o contador ao receber dano
+	health_changed.emit(current_health)
+	
+	if current_health <= 0:
+		die()
+
+func die() -> void:
+	died.emit()
+	queue_free()
 	
 "
 
@@ -223,9 +247,13 @@ animation = &"idle"
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=474776357]
 
 [node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=1557881505]
-offset_top = 2.0
-offset_right = 152.0
-offset_bottom = 66.0
+offset_left = 5.000001
+offset_top = 3.0000002
+offset_right = 571.7059
+offset_bottom = 56.41176
+scale = Vector2(0.085, 0.085)
+value = 100.0
+nine_patch_stretch = true
 texture_under = SubResource("GradientTexture2D_8lp7b")
 texture_progress = SubResource("GradientTexture2D_n7gv1")
 script = SubResource("GDScript_anxv6")

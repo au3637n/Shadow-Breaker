@@ -198,16 +198,16 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_vvb44"]
-radius = 6.0
-height = 16.0
+radius = 5.0
+height = 14.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_o6tyj"]
-radius = 6.0
-height = 16.0
+radius = 5.0
+height = 14.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_mbgw5"]
-radius = 6.0
-height = 16.0
+radius = 5.0
+height = 14.0
 
 [node name="enemy1" type="CharacterBody2D" unique_id=2060417931]
 top_level = true
@@ -219,16 +219,19 @@ animation = &"idle"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=267903278]
+position = Vector2(-1, 0)
 shape = SubResource("CapsuleShape2D_vvb44")
 
 [node name="hitbox_damage" type="Area2D" parent="." unique_id=762788323]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox_damage" unique_id=1813553462]
+position = Vector2(-1, 0)
 shape = SubResource("CapsuleShape2D_o6tyj")
 
 [node name="hitbox_player_damage" type="Area2D" parent="." unique_id=866217103]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="hitbox_player_damage" unique_id=140751968]
+position = Vector2(-1, 0)
 shape = SubResource("CapsuleShape2D_mbgw5")
 
 [node name="Timer" type="Timer" parent="." unique_id=1496210450]
