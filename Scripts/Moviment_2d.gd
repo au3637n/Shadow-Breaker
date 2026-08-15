@@ -2,7 +2,8 @@ extends CharacterBody2D
 
 @onready var anim: AnimatedSprite2D = $AnimatedSprite2D
 
-
+var maxHp = 100
+var hp = 100
 const SPEED = 40.0
 const JUMP_VELOCITY = -300.0
 

@@ -177,6 +177,38 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="Gradient" id="Gradient_1sodm"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_8lp7b"]
+gradient = SubResource("Gradient_1sodm")
+
+[sub_resource type="Gradient" id="Gradient_c472b"]
+offsets = PackedFloat32Array(0.0064935065)
+colors = PackedColorArray(0, 1, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_n7gv1"]
+gradient = SubResource("Gradient_c472b")
+
+[sub_resource type="GDScript" id="GDScript_anxv6"]
+resource_name = "life"
+script/source = "extends TextureProgressBar
+@export var player = Node2D
+@export var regen_rate: float = 1.0
+@export var regen_delay: float = 3.0
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	max_value = player.maxHp
+	value = player.hp
+	
+"
+
 [node name="You" type="CharacterBody2D" unique_id=2131732850]
 top_level = true
 script = ExtResource("1_6ldss")
@@ -187,3 +219,13 @@ shape = SubResource("CapsuleShape2D_anxv6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=869960685]
 sprite_frames = SubResource("SpriteFrames_1wu55")
 animation = &"idle"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=474776357]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="CanvasLayer" unique_id=1557881505]
+offset_top = 2.0
+offset_right = 152.0
+offset_bottom = 66.0
+texture_under = SubResource("GradientTexture2D_8lp7b")
+texture_progress = SubResource("GradientTexture2D_n7gv1")
+script = SubResource("GDScript_anxv6")
