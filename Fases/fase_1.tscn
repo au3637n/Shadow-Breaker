@@ -1,3 +1,98 @@
-[gd_scene format=3 uid="uid://uborblr317qe"]
+[gd_scene format=4 uid="uid://uborblr317qe"]
+
+[ext_resource type="PackedScene" uid="uid://b2k6dwvldvabd" path="res://Characters/enemy_1.tscn" id="1_5me8a"]
+[ext_resource type="Texture2D" uid="uid://pn40qkubvkda" path="res://Assets/Tiny_Metroidvania_8x8_Free/Grass_Tileset_Free.png" id="1_8krkx"]
+[ext_resource type="PackedScene" uid="uid://bmgy8kg1qyo1x" path="res://Characters/character_body_2d.tscn" id="2_iciit"]
+[ext_resource type="Texture2D" uid="uid://xu1ktrly4nvk" path="res://Assets/MorningAdventuresV2/Background.png" id="3_iciit"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ecli"]
+texture = ExtResource("3_iciit")
+0:0/size_in_atlas = Vector2i(30, 16)
+0:0/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_8lp7b"]
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_0ecli")
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_15gpn"]
+texture = ExtResource("1_8krkx")
+0:0/0 = 0
+0:0/0/z_index = 1
+1:0/0 = 0
+1:0/0/z_index = 1
+2:0/0 = 0
+2:0/0/z_index = 1
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-2.5381384, 0.30457687, 8.122044, 0.20305157, 8.122044, 8.122043, -2.5381384, 8.223569)
+3:0/next_alternative_id = 2
+3:0/0 = 0
+3:0/0/z_index = 1
+3:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.122044, -0.10152531, 8.122044, 0.10152531, 8.020519, 8.020518, -8.020517, 8.020518)
+3:0/1 = 1
+3:0/1/z_index = 1
+3:0/1/physics_layer_0/polygon_0/points = PackedVector2Array(-8.223569, 0.20305157, 8.020519, 0.20305157, 8.122044, 7.918992, -8.122044, 7.918992)
+3:0/1/physics_layer_0/polygon_0/one_way = true
+4:0/0 = 0
+4:0/0/z_index = 1
+4:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8.020517, 0.10152531, 1.9289856, 0.10152531, 1.725935, 8.020518, -8.020517, 7.918992)
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+8:0/0 = 0
+9:0/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+2:1/0/z_index = 1
+3:1/0 = 0
+3:1/0/z_index = 1
+4:1/0 = 0
+4:1/0/z_index = 1
+5:1/0 = 0
+6:1/0 = 0
+7:1/0 = 0
+8:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_gh1ik"]
+tile_size = Vector2i(8, 8)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_15gpn")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_32cle"]
+size = Vector2(10.5, 155)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gh1ik"]
+size = Vector2(304, 6)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8lp7b"]
+size = Vector2(6, 156)
 
 [node name="fase1" type="Node2D" unique_id=1505274550]
+
+[node name="enemy1" parent="." unique_id=2060417931 instance=ExtResource("1_5me8a")]
+position = Vector2(286, 108)
+
+[node name="You" parent="." unique_id=2131732850 instance=ExtResource("2_iciit")]
+z_index = 2
+position = Vector2(23, 117)
+
+[node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=814578019]
+position = Vector2(217, 95)
+tile_map_data = PackedByteArray("AAD8//v/AAAAAAAAAAD8//z/AAAPAAAAAAA=")
+tile_set = SubResource("TileSet_8lp7b")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=786529103]
+tile_map_data = PackedByteArray("AAABABIAAAAGAAEAAAACABIAAAAGAAEAAAADABIAAAAGAAEAAAAEABIAAAAGAAEAAAAFABIAAAAGAAEAAAAGABIAAAAGAAEAAAAHABIAAAAGAAEAAAAIABIAAAAGAAEAAAAJABIAAAAGAAEAAAAKABIAAAAGAAEAAAALABIAAAAGAAEAAAAMABIAAAAGAAEAAAANABIAAAAGAAEAAAAOABIAAAAGAAEAAAAPABIAAAAGAAEAAAAQABIAAAAGAAEAAAASABIAAAAGAAEAAAAUABIAAAAGAAEAAAAVABIAAAAGAAEAAAAWABIAAAAGAAEAAAAXABIAAAAGAAEAAAAYABIAAAAGAAEAAAAZABIAAAAGAAEAAAAaABIAAAAGAAEAAAAbABIAAAAGAAEAAAAcABIAAAAGAAEAAAAdABIAAAAGAAEAAAAeABIAAAAGAAEAAAAfABIAAAAGAAEAAAAgABIAAAAGAAEAAAAhABIAAAAGAAEAAAAiABIAAAAGAAEAAAAjABIAAAAGAAEAAAAkABIAAAAGAAEAAAABABAAAAAGAAEAAAACABAAAAAGAAEAAAADABAAAAAGAAEAAAAEABAAAAAGAAEAAAAFABAAAAAGAAEAAAAGABAAAAAGAAEAAAAHABAAAAAGAAEAAAAIABAAAAAGAAEAAAAJABAAAAAGAAEAAAAKABAAAAAGAAEAAAALABAAAAAGAAEAAAAMABAAAAAGAAEAAAANABAAAAAGAAEAAAAOABAAAAAGAAEAAAAPABAAAAAGAAEAAAAQABAAAAAGAAEAAAARABAAAAAGAAEAAAASABAAAAAGAAEAAAAUABAAAAAGAAEAAAAVABAAAAAGAAEAAAAWABAAAAAGAAEAAAAXABAAAAAGAAEAAAAYABAAAAAGAAEAAAAZABAAAAAGAAEAAAAaABAAAAAGAAEAAAAbABAAAAAGAAEAAAAcABAAAAAGAAEAAAAdABAAAAAGAAEAAAAeABAAAAAGAAEAAAAfABAAAAAGAAEAAAAgABAAAAAGAAEAAAAhABAAAAAGAAEAAAAiABAAAAAGAAEAAAAjABAAAAAGAAEAAAAkABAAAAAGAAEAAAAkAA8AAAAGAAEAAAAjAA8AAAAGAAEAAAAiAA8AAAAGAAEAAAAhAA8AAAAGAAEAAAAgAA8AAAAGAAEAAAAfAA8AAAAGAAEAAAAeAA8AAAAGAAEAAAAdAA8AAAAGAAEAAAAcAA8AAAAGAAEAAAAbAA8AAAAGAAEAAAAaAA8AAAAGAAEAAAAZAA8AAAAGAAEAAAAYAA8AAAAGAAEAAAAXAA8AAAAGAAEAAAAWAA8AAAAGAAEAAAAVAA8AAAAGAAEAAAAUAA8AAAAGAAEAAAATAA4AAAACAAAAAAACAA8AAAADAAAAAAADAA8AAAADAAAAAAAEAA8AAAADAAAAAAAFAA8AAAADAAAAAAAGAA8AAAADAAAAAAAHAA8AAAADAAAAAAAIAA8AAAADAAAAAAAJAA8AAAADAAAAAAAKAA8AAAADAAAAAAALAA8AAAADAAAAAAAMAA8AAAADAAAAAAANAA8AAAADAAAAAAAOAA8AAAADAAAAAAAPAA8AAAADAAAAAAAQAA8AAAADAAAAAAARAA8AAAADAAAAAAASAA8AAAADAAAAAAAVAA4AAAADAAAAAAAWAA4AAAADAAAAAAAXAA4AAAADAAAAAAAYAA4AAAADAAAAAAAZAA4AAAADAAAAAAAaAA4AAAADAAAAAAAbAA4AAAADAAAAAAAcAA4AAAADAAAAAAAdAA4AAAADAAAAAAAeAA4AAAADAAAAAAAfAA4AAAADAAAAAAAgAA4AAAADAAAAAAAhAA4AAAADAAAAAAAiAA4AAAADAAAAAAAjAA4AAAADAAAAAAAkAA4AAAADAAAAAAAAAA8AAAACAAAAAAAlAA4AAAAEAAAAAAAOAAwAAAAGAAEAAAAMAAwAAAAGAAEAAAAKAAwAAAAGAAEAAAASAA4AAAADAAEAAAAQAA4AAAADAAEAAAAOAA4AAAADAAEAAAAMAA4AAAADAAEAAAAIAA4AAAADAAEAAAAXAA0AAAADAAEAAAAbAA0AAAADAAEAAAAVAA0AAAADAAEAAAAEAA4AAAADAAEAAAAgAA0AAAADAAEAAAAhAA0AAAADAAEAAAAiAA0AAAADAAEAAAAdAA0AAAADAAEAAAAKAAsAAAADAAAAAQAMAAsAAAADAAAAAQAOAAsAAAADAAAAAQA=")
+tile_set = SubResource("TileSet_gh1ik")
+
+[node name="margens do mapa" type="Area2D" parent="." unique_id=1978619376]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="margens do mapa" unique_id=1684634326]
+position = Vector2(5.75, 78.5)
+shape = SubResource("RectangleShape2D_32cle")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="margens do mapa" unique_id=1510266345]
+position = Vector2(150, 3)
+shape = SubResource("RectangleShape2D_gh1ik")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="margens do mapa" unique_id=23818425]
+position = Vector2(303, 79)
+shape = SubResource("RectangleShape2D_8lp7b")
