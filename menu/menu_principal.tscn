@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://bsm5n07qjg5gb"]
+
+[ext_resource type="Script" uid="uid://bh347772menkt" path="res://menu_principal.gd" id="1_yo6f2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dgqxo"]
+
+[node name="Menu principal" type="Control" unique_id=1029142930]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_yo6f2")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1889335716]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Título" type="Label" parent="." unique_id=1446269567]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Jogar" type="Button" parent="." unique_id=777214218]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 8.0
+offset_right = 17.0
+offset_bottom = 16.0
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dgqxo")
+
+[node name="Opções" type="Button" parent="." unique_id=464422501]
+layout_mode = 0
+offset_left = -16.0
+offset_top = 15.0
+offset_right = -8.0
+offset_bottom = 23.0
+
+[node name="Sair" type="Button" parent="." unique_id=1439264860]
+layout_mode = 0
+offset_left = -18.0
+offset_top = 25.0
+offset_right = -10.0
+offset_bottom = 33.0
+
+[connection signal="pressed" from="Jogar" to="." method="_on_jogar_pressed"]
