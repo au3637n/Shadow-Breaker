@@ -112,7 +112,7 @@ animations = [{
 }],
 "loop": 0,
 "name": &"attack",
-"speed": 5.0
+"speed": 15.0
 }, {
 "frames": [],
 "loop": 1,
@@ -233,6 +233,9 @@ func die() -> void:
 	
 "
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b47ro"]
+size = Vector2(12.5, 20.75)
+
 [node name="You" type="CharacterBody2D" unique_id=2131732850]
 top_level = true
 script = ExtResource("1_6ldss")
@@ -243,6 +246,8 @@ shape = SubResource("CapsuleShape2D_anxv6")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=869960685]
 sprite_frames = SubResource("SpriteFrames_1wu55")
 animation = &"attack"
+frame = 4
+frame_progress = 0.12682189
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=474776357]
 
@@ -257,3 +262,11 @@ nine_patch_stretch = true
 texture_under = SubResource("GradientTexture2D_8lp7b")
 texture_progress = SubResource("GradientTexture2D_n7gv1")
 script = SubResource("GDScript_anxv6")
+
+[node name="hitbox" type="Area2D" parent="." unique_id=1336322700]
+position = Vector2(69.99999, 9)
+scale = Vector2(0.9999999, 0.9999999)
+
+[node name="colision" type="CollisionShape2D" parent="hitbox" unique_id=483117813]
+position = Vector2(-56.75, -9.375)
+shape = SubResource("RectangleShape2D_b47ro")
