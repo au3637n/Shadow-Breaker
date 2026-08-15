@@ -209,6 +209,54 @@ height = 14.0
 radius = 5.0
 height = 14.0
 
+[sub_resource type="Gradient" id="Gradient_f0kjn"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_f0kjn"]
+gradient = SubResource("Gradient_f0kjn")
+
+[sub_resource type="Gradient" id="Gradient_niy0m"]
+offsets = PackedFloat32Array(0)
+colors = PackedColorArray(0, 1, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_niy0m"]
+gradient = SubResource("Gradient_niy0m")
+
+[sub_resource type="GDScript" id="GDScript_5y8l3"]
+resource_name = "enemy1 life"
+script/source = "extends TextureProgressBar
+
+@export var max_health: float = 300.0
+var current_health: float
+@onready var enemy: CharacterBody2D = get_parent()
+
+func _ready() -> void:
+	if enemy:
+		max_value = enemy.max_health
+		value = enemy.current_health
+		# Conecta o sinal do inimigo
+		enemy.health_changed.connect(update_bar)
+
+func update_bar(new_health: float) -> void:
+	value = new_health
+signal health_changed(new_health)
+signal died
+
+
+func take_damage(amount: float) -> void:
+	current_health -= amount
+	current_health = max(0, current_health) # Impede que o HP fique menor que 0
+	health_changed.emit(current_health)
+	
+	if current_health <= 0:
+		die()
+
+func die() -> void:
+	died.emit()
+	queue_free() # Destrói o inimigo
+"
+
 [node name="enemy1" type="CharacterBody2D" unique_id=2060417931]
 top_level = true
 script = ExtResource("1_vvb44")
@@ -235,3 +283,15 @@ position = Vector2(-1, 0)
 shape = SubResource("CapsuleShape2D_mbgw5")
 
 [node name="Timer" type="Timer" parent="." unique_id=1496210450]
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1307001986]
+offset_left = -10.0
+offset_top = -14.0
+offset_right = 10.0
+offset_bottom = -10.0
+max_value = 300.0
+value = 300.0
+nine_patch_stretch = true
+texture_under = SubResource("GradientTexture2D_f0kjn")
+texture_progress = SubResource("GradientTexture2D_niy0m")
+script = SubResource("GDScript_5y8l3")

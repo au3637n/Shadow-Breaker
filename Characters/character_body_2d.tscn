@@ -111,7 +111,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_3pfma")
 }],
 "loop": 0,
-"name": &"atack",
+"name": &"attack",
 "speed": 5.0
 }, {
 "frames": [],
@@ -242,7 +242,7 @@ shape = SubResource("CapsuleShape2D_anxv6")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=869960685]
 sprite_frames = SubResource("SpriteFrames_1wu55")
-animation = &"idle"
+animation = &"attack"
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=474776357]
 
