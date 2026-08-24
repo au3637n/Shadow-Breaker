@@ -8,9 +8,9 @@ const JUMP_VELOCITY = -300.0
 @export var speed: float = 120.0
 @export var max_health: int = 100
 var current_health: int
-var enemy_state: String = "idle" # "idle", "walking", "attacking", "hit", "dead"
+var enemy_state: String = "idle" 
 
-@export var player_node: Node2D # Drag your Player node here in the Inspector
+@export var player_node: Node2D 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var hitbox_collision: CollisionShape2D = $Hitbox/CollisionShape2D
 
@@ -51,27 +51,25 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-# Attack Logic
 func execute_attack() -> void:
 	enemy_state = "attacking"
 	velocity.x = 0
 	animated_sprite.play("punch")
 	
-	# Enable Hitbox mid-animation (frame specific)
+	#
 	await get_tree().create_timer(0.2).timeout
 	if enemy_state == "attacking":
 		hitbox_collision.disabled = false
 		
-	# Disable Hitbox after impact
+	
 	await get_tree().create_timer(0.2).timeout
 	hitbox_collision.disabled = true
 	
-	# End Attack
+	
 	await animated_sprite.animation_finished
 	enemy_state = "idle"
-	$AttackTimer.start(1.0) # Cooldown before next attack
+	$AttackTimer.start(1.0) 
 
-# Damage Logic (Call this function when Player attacks)
 func take_damage(amount: int) -> void:
 	if enemy_state == "dead":
 		return
@@ -80,7 +78,7 @@ func take_damage(amount: int) -> void:
 	enemy_state = "hit"
 	hitbox_collision.disabled = true
 	
-	# Knockback effect
+	
 	var knockback_dir = -1 if animated_sprite.flip_h == false else 1
 	velocity.x = knockback_dir * 150.0
 	move_and_slide()
