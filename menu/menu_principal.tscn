@@ -1,46 +1,111 @@
-[gd_scene format=3 uid="uid://bsm5n07qjg5gb"]
+[gd_scene format=3 uid="uid://ceph7d1ly53o7"]
 
-[ext_resource type="Script" uid="uid://bh347772menkt" path="res://menu_principal.gd" id="1_yo6f2"]
+[ext_resource type="Script" uid="uid://cy62vbwf4vx6m" path="res://Scripts/menu_principal.gd" id="1_oc0hg"]
+[ext_resource type="FontFile" uid="uid://1exjblxcjttt" path="res://IcelandWinterstorm_PERSONAL_USE_ONLY.otf" id="2_oc0hg"]
+[ext_resource type="Texture2D" uid="uid://xu1ktrly4nvk" path="res://Assets/MorningAdventuresV2/Background.png" id="3_oc0hg"]
+[ext_resource type="Script" uid="uid://va5gveltkk32" path="res://Scripts/parallax_2d.gd" id="3_qbxch"]
 
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dgqxo"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lxfoi"]
+bg_color = Color(0.61247355, 0.17899325, 0.5731756, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.35002223, 8.341059e-05, 0.35001966, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
-[node name="Menu principal" type="Control" unique_id=1029142930]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_dgqxo"]
+bg_color = Color(0.10495051, 2.5115227e-05, 0.12699974, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.07058824, 0.07058824, 0.07058824, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_vs6mj"]
+bg_color = Color(0.92870057, 0.22716597, 0.82881576, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.34901962, 0, 0.34901962, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="Menu Principal" type="Control" unique_id=986599716]
 layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-script = ExtResource("1_yo6f2")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_oc0hg")
 
-[node name="ColorRect" type="ColorRect" parent="." unique_id=1889335716]
+[node name="Título" type="Label" parent="." unique_id=1726258618]
+z_index = 1
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = 33.0
+offset_top = 7.0
+offset_right = 277.0
+offset_bottom = 50.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_oc0hg")
+theme_override_font_sizes/font_size = 50
+text = "Shadow Breaker"
 
-[node name="Título" type="Label" parent="." unique_id=1446269567]
+[node name="jogar" type="Button" parent="." unique_id=1161858609]
+z_index = 1
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+offset_left = 78.0
+offset_top = 58.0
+offset_right = 225.0
+offset_bottom = 93.0
+theme_override_fonts/font = ExtResource("2_oc0hg")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_lxfoi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dgqxo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vs6mj")
+text = "Jogar"
 
-[node name="Jogar" type="Button" parent="." unique_id=777214218]
+[node name="Sair" type="Button" parent="." unique_id=1383255473]
+z_index = 1
 layout_mode = 0
-offset_left = 9.0
-offset_top = 8.0
-offset_right = 17.0
-offset_bottom = 16.0
-theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dgqxo")
+offset_left = 78.0
+offset_top = 104.0
+offset_right = 225.0
+offset_bottom = 139.0
+theme_override_fonts/font = ExtResource("2_oc0hg")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StyleBoxFlat_lxfoi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_dgqxo")
+theme_override_styles/hover = SubResource("StyleBoxFlat_vs6mj")
+text = "Sair"
 
-[node name="Opções" type="Button" parent="." unique_id=464422501]
+[node name="ColorRect" type="ColorRect" parent="." unique_id=2026445853]
 layout_mode = 0
-offset_left = -16.0
-offset_top = 15.0
-offset_right = -8.0
-offset_bottom = 23.0
+offset_left = 19.0
+offset_top = 5.0
+offset_right = 287.0
+offset_bottom = 51.0
+color = Color(0.0008877465, 0.0008877465, 0.0008877465, 0.34901962)
 
-[node name="Sair" type="Button" parent="." unique_id=1439264860]
-layout_mode = 0
-offset_left = -18.0
-offset_top = 25.0
-offset_right = -10.0
-offset_bottom = 33.0
+[node name="Parallax2D" type="Parallax2D" parent="." unique_id=1155264217]
+repeat_size = Vector2(149, 0)
+script = ExtResource("3_qbxch")
 
-[connection signal="pressed" from="Jogar" to="." method="_on_jogar_pressed"]
+[node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1529540034]
+position = Vector2(149.00002, 73)
+scale = Vector2(0.65, 0.65)
+texture = ExtResource("3_oc0hg")
+
+[connection signal="pressed" from="jogar" to="." method="_on_jogar_pressed"]
+[connection signal="pressed" from="Sair" to="." method="_on_sair_pressed"]
