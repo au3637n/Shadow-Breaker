@@ -1,4 +1,4 @@
-[gd_scene format=3 uid="uid://ceph7d1ly53o7"]
+[gd_scene format=3 uid="uid://bsm5n07qjg5gb"]
 
 [ext_resource type="Script" uid="uid://cy62vbwf4vx6m" path="res://Scripts/menu_principal.gd" id="1_oc0hg"]
 [ext_resource type="FontFile" uid="uid://1exjblxcjttt" path="res://IcelandWinterstorm_PERSONAL_USE_ONLY.otf" id="2_oc0hg"]

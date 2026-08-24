@@ -40,12 +40,9 @@ func play_hurt() -> void:
 	anim.stop()
 	anim.play("hurt")
 
-	# Espera o hurt terminar
 	await anim.animation_finished
 
-	# Só volta para idle se:
-	# 1. O inimigo não morreu
-	# 2. Esse ainda é o último hit recebido
+	
 	if not is_dead and this_hurt_id == hurt_id:
 		anim.play("idle")
 

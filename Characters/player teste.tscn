@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://cgmo5b0c6yji3"]
 
-[ext_resource type="Script" uid="uid://br06fs84n3hba" path="res://Scripts/Moviment_2d.gd" id="1_p8jxx"]
+[ext_resource type="Script" uid="uid://dbdtrrwaku2wk" path="res://Scripts/Movimento teste.gd" id="1_morkk"]
 [ext_resource type="Texture2D" uid="uid://bgqkd8sdm8a48" path="res://Assets/Soldier/Soldier_Attack01.png" id="2_morkk"]
 [ext_resource type="Texture2D" uid="uid://cjf2brf1kp3oi" path="res://Assets/Soldier/Soldier_Idle.png" id="3_ca386"]
 [ext_resource type="Texture2D" uid="uid://b2wsrrlo5cpys" path="res://Assets/Soldier/Soldier_Walk.png" id="4_44imm"]
@@ -187,7 +187,7 @@ size = Vector2(13, 18)
 
 [node name="You" type="CharacterBody2D" unique_id=2131732850]
 top_level = true
-script = ExtResource("1_p8jxx")
+script = ExtResource("1_morkk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=454512905]
 position = Vector2(0, -1)

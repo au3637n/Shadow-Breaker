@@ -1,9 +1,9 @@
 [gd_scene format=4 uid="uid://uborblr317qe"]
 
-[ext_resource type="PackedScene" uid="uid://b2k6dwvldvabd" path="res://Characters/enemy_1.tscn" id="1_5me8a"]
 [ext_resource type="Texture2D" uid="uid://pn40qkubvkda" path="res://Assets/Tiny_Metroidvania_8x8_Free/Grass_Tileset_Free.png" id="1_8krkx"]
-[ext_resource type="PackedScene" uid="uid://bmgy8kg1qyo1x" path="res://Characters/character_body_2d.tscn" id="2_iciit"]
+[ext_resource type="PackedScene" uid="uid://cgmo5b0c6yji3" path="res://Characters/player teste.tscn" id="3_0ecli"]
 [ext_resource type="Texture2D" uid="uid://xu1ktrly4nvk" path="res://Assets/MorningAdventuresV2/Background.png" id="3_iciit"]
+[ext_resource type="PackedScene" uid="uid://dxcrmqg0gb30b" path="res://Characters/enemy teste.tscn" id="4_nxvxg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ecli"]
 texture = ExtResource("3_iciit")
@@ -67,13 +67,6 @@ size = Vector2(15, 159)
 
 [node name="fase1" type="Node2D" unique_id=1505274550]
 
-[node name="enemy1" parent="." unique_id=2060417931 instance=ExtResource("1_5me8a")]
-position = Vector2(283, 108)
-
-[node name="You" parent="." unique_id=2131732850 instance=ExtResource("2_iciit")]
-z_index = 2
-position = Vector2(23, 117)
-
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=814578019]
 position = Vector2(217, 95)
 tile_map_data = PackedByteArray("AAD8//v/AAAAAAAAAAD8//z/AAAPAAAAAAA=")
@@ -96,3 +89,9 @@ shape = SubResource("RectangleShape2D_b47ro")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=658141513]
 position = Vector2(300.5, 78.5)
 shape = SubResource("RectangleShape2D_324lg")
+
+[node name="You" parent="." unique_id=2131732850 instance=ExtResource("3_0ecli")]
+position = Vector2(109, 84)
+
+[node name="enemy1" parent="." unique_id=2060417931 instance=ExtResource("4_nxvxg")]
+position = Vector2(244, 107)

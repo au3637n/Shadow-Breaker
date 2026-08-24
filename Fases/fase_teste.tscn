@@ -90,8 +90,8 @@ shape = SubResource("RectangleShape2D_b47ro")
 position = Vector2(300.5, 78.5)
 shape = SubResource("RectangleShape2D_324lg")
 
-[node name="You" parent="." unique_id=2131732850 instance=ExtResource("3_1jg4h")]
-position = Vector2(102, 83)
+[node name="enemy1" parent="." unique_id=2060417931 instance=ExtResource("4_qia1d")]
+position = Vector2(222, 108)
 
-[node name="enemy1" parent="You" unique_id=2060417931 instance=ExtResource("4_qia1d")]
-position = Vector2(217, 110)
+[node name="You" parent="enemy1" unique_id=2131732850 instance=ExtResource("3_1jg4h")]
+position = Vector2(104, 81)
