@@ -7,13 +7,13 @@
 [ext_resource type="Texture2D" uid="uid://iklcmq1xqhy2" path="res://Assets/Orc/Orc_Idle.png" id="4_j2ypg"]
 [ext_resource type="Texture2D" uid="uid://b3pgih2crhc22" path="res://Assets/Orc/Orc_Walk.png" id="5_lymfa"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_baw5n"]
-atlas = ExtResource("2_umc2l")
-region = Rect2(0, 0, 100, 100)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_vgk6l"]
 atlas = ExtResource("2_umc2l")
 region = Rect2(100, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_baw5n"]
+atlas = ExtResource("2_umc2l")
+region = Rect2(0, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7beom"]
 atlas = ExtResource("2_umc2l")
@@ -123,10 +123,10 @@ region = Rect2(700, 0, 100, 100)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_baw5n")
+"texture": SubResource("AtlasTexture_vgk6l")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vgk6l")
+"texture": SubResource("AtlasTexture_baw5n")
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_7beom")
@@ -241,7 +241,7 @@ script = ExtResource("1_umc2l")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=83065110]
 sprite_frames = SubResource("SpriteFrames_vvb44")
-animation = &"idle"
+animation = &"attack"
 flip_h = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=267903278]
