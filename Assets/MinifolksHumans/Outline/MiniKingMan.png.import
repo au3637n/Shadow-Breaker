@@ -2,12 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bmwevgmdxm4wd"
-valid=false
+uid="uid://cfkw6nqx7n7nb"
+path="res://.godot/imported/MiniKingMan.png-d4a8621ffd8e7ba5df487a1082b07cc9.ctex"
+metadata={
+"vram_texture": false
+}
 
 [deps]
 
-source_file="res://Assets/freeversion.png/__MACOSX/._freeversion.png"
+source_file="res://Assets/MinifolksHumans/Outline/MiniKingMan.png"
+dest_files=["res://.godot/imported/MiniKingMan.png-d4a8621ffd8e7ba5df487a1082b07cc9.ctex"]
 
 [params]
 

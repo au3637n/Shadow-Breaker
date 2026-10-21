@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://br5pkusvy2g7"
-path="res://.godot/imported/freeversion.png-d1a7fdde13b083cfa180fee2971ca858.ctex"
+uid="uid://te2wqhjrik61"
+path="res://.godot/imported/MiniCavalierMan.png-50152792dac8aaea0ad4b18c0907aabe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://menus/freeversion.png"
-dest_files=["res://.godot/imported/freeversion.png-d1a7fdde13b083cfa180fee2971ca858.ctex"]
+source_file="res://Assets/MinifolksHumans/Outline/MiniCavalierMan.png"
+dest_files=["res://.godot/imported/MiniCavalierMan.png-50152792dac8aaea0ad4b18c0907aabe.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://wltn6dju4a04"
-path="res://.godot/imported/painting-01 (1).jpg-1960ed64f261c8951e930f9b0a519fd1.ctex"
+uid="uid://bgo8yggotp2hb"
+path="res://.godot/imported/MiniShieldMan.png-8fd504e66df1987fcabcb3f53caf9885.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://painting-01 (1).jpg"
-dest_files=["res://.godot/imported/painting-01 (1).jpg-1960ed64f261c8951e930f9b0a519fd1.ctex"]
+source_file="res://Assets/MinifolksHumans/Without Outline/MiniShieldMan.png"
+dest_files=["res://.godot/imported/MiniShieldMan.png-8fd504e66df1987fcabcb3f53caf9885.ctex"]
 
 [params]
 

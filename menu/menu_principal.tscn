@@ -1,7 +1,7 @@
-[gd_scene format=3 uid="uid://bsm5n07qjg5gb"]
+[gd_scene format=3 uid="uid://ceph7d1ly53o7"]
 
 [ext_resource type="Script" uid="uid://cy62vbwf4vx6m" path="res://Scripts/menu_principal.gd" id="1_oc0hg"]
-[ext_resource type="FontFile" uid="uid://1exjblxcjttt" path="res://IcelandWinterstorm_PERSONAL_USE_ONLY.otf" id="2_oc0hg"]
+[ext_resource type="FontFile" uid="uid://1exjblxcjttt" path="res://menu/IcelandWinterstorm_PERSONAL_USE_ONLY.otf" id="2_oc0hg"]
 [ext_resource type="Texture2D" uid="uid://xu1ktrly4nvk" path="res://Assets/MorningAdventuresV2/Background.png" id="3_oc0hg"]
 [ext_resource type="Script" uid="uid://va5gveltkk32" path="res://Scripts/parallax_2d.gd" id="3_qbxch"]
 
@@ -103,8 +103,8 @@ repeat_size = Vector2(149, 0)
 script = ExtResource("3_qbxch")
 
 [node name="Sprite2D" type="Sprite2D" parent="Parallax2D" unique_id=1529540034]
-position = Vector2(149.00002, 73)
-scale = Vector2(0.65, 0.65)
+position = Vector2(157, 73)
+scale = Vector2(0.6833333, 0.65)
 texture = ExtResource("3_oc0hg")
 
 [connection signal="pressed" from="jogar" to="." method="_on_jogar_pressed"]
