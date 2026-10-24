@@ -187,6 +187,7 @@ size = Vector2(13, 18)
 
 [node name="You" type="CharacterBody2D" unique_id=2131732850]
 top_level = true
+z_index = 10
 script = ExtResource("1_morkk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=454512905]

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://8sx6nnqqwwvp"
-path="res://.godot/imported/dark brick.png-fcc1952d626534ae493ecd5a92062cf4.ctex"
+uid="uid://clyu42x5oxvl6"
+path="res://.godot/imported/trono_do_mal.png-b58522af6c05cf32ce2233e299f2506b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/dark brick.png"
-dest_files=["res://.godot/imported/dark brick.png-fcc1952d626534ae493ecd5a92062cf4.ctex"]
+source_file="res://Assets/trono_do_mal.png"
+dest_files=["res://.godot/imported/trono_do_mal.png-b58522af6c05cf32ce2233e299f2506b.ctex"]
 
 [params]
 
