@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://xs31eeqjap0y" path="res://Assets/arvore vila.png" id="8_f0r72"]
 [ext_resource type="AudioStream" uid="uid://dcchluvmh2qli" path="res://Audio/music/kiravale-medieval-music-593694.mp3" id="12_2hr0s"]
 [ext_resource type="Script" uid="uid://dfdjm0yp35igu" path="res://Fases/area_nova_fase.gd" id="13_b7yet"]
+[ext_resource type="PackedScene" uid="uid://c8xmv1jr3p2te" path="res://menu/menu_pausa.tscn" id="14_du4t7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0tn5y"]
 size = Vector2(20, 172)
@@ -1136,7 +1137,7 @@ tile_map_data = PackedByteArray("AAAAAAgAAgAAAAAAAAABAAgAAgABAAAAAAACAAgAAgACAAA
 tile_set = SubResource("TileSet_32cle")
 
 [node name="You" parent="." unique_id=2131732850 instance=ExtResource("6_0ds2r")]
-position = Vector2(64, 118)
+position = Vector2(64, 114)
 
 [node name="Camera2D" type="Camera2D" parent="You" unique_id=1323909841]
 limit_left = 0
@@ -1244,3 +1245,5 @@ proxima_fase = "uid://ciiyh0pw3kqe0"
 z_index = 10
 position = Vector2(-3, 29)
 shape = SubResource("RectangleShape2D_lxfoi")
+
+[node name="Menu_Pausa" parent="." unique_id=820098720 instance=ExtResource("14_du4t7")]

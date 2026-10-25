@@ -12,7 +12,7 @@
 size = Vector2(21, 177)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1e4u0"]
-size = Vector2(339, 20)
+size = Vector2(339, 12)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_02xmu"]
 size = Vector2(21, 170)
@@ -513,7 +513,7 @@ position = Vector2(0.5, 78.5)
 shape = SubResource("RectangleShape2D_sbujv")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=892371852]
-position = Vector2(159.5, 0)
+position = Vector2(159.5, -4)
 shape = SubResource("RectangleShape2D_1e4u0")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=2104528434]
@@ -535,7 +535,7 @@ tile_map_data = PackedByteArray("AAABAAAAAQAJAAUAAAACAAAAAQAJAAUAAAADAAAAAQAJAAU
 tile_set = SubResource("TileSet_32cle")
 
 [node name="You" parent="." unique_id=2131732850 instance=ExtResource("4_1e4u0")]
-position = Vector2(49, 118)
+position = Vector2(49, 115)
 
 [node name="Menu_Pausa" parent="." unique_id=820098720 instance=ExtResource("5_02xmu")]
 
