@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://3v3tkhuj3doj" path="res://Assets/tileset.png" id="8_ulvwi"]
 [ext_resource type="PackedScene" uid="uid://c8xmv1jr3p2te" path="res://menu/menu_pausa.tscn" id="9_fonfr"]
 [ext_resource type="AudioStream" uid="uid://db7jpr0vk80km" path="res://Audio/music/Fase-1-e-4.mp3.mp3" id="10_0heo7"]
+[ext_resource type="PackedScene" uid="uid://cbjafb6uw487o" path="res://Fases/area_2d.tscn" id="11_uwngj"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7gv1"]
 size = Vector2(21, 173)
@@ -735,3 +736,7 @@ stream = ExtResource("10_0heo7")
 volume_db = -16.639
 autoplay = true
 parameters/looping = true
+
+[node name="door" parent="." unique_id=1202407928 instance=ExtResource("11_uwngj")]
+position = Vector2(263, 92)
+next_level = "res://Fases/fase_final_medenight.tscn"
