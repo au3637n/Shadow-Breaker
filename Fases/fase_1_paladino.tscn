@@ -731,7 +731,7 @@ tile_set = SubResource("TileSet_32cle")
 [node name="Menu_Pausa" parent="." unique_id=820098720 instance=ExtResource("9_fonfr")]
 visible = false
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1068406674]
+[node name="musica" type="AudioStreamPlayer" parent="." unique_id=1068406674]
 stream = ExtResource("10_0heo7")
 volume_db = -16.639
 autoplay = true

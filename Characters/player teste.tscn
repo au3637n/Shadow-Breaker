@@ -184,7 +184,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s1ctu"]
 size = Vector2(13, 18)
 
-[node name="You" type="CharacterBody2D" unique_id=2131732850]
+[node name="You" type="CharacterBody2D" unique_id=2131732850 groups=["player"]]
 top_level = true
 z_index = 10
 script = ExtResource("1_morkk")

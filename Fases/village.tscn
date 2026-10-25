@@ -11,6 +11,8 @@
 [ext_resource type="Texture2D" uid="uid://dp106o6ekylov" path="res://Assets/castle_good_side (1).png" id="7_0tn5y"]
 [ext_resource type="Texture2D" uid="uid://ki62pvm3hxj1" path="res://Assets/casa2.png" id="7_f0r72"]
 [ext_resource type="Texture2D" uid="uid://xs31eeqjap0y" path="res://Assets/arvore vila.png" id="8_f0r72"]
+[ext_resource type="AudioStream" uid="uid://dcchluvmh2qli" path="res://Audio/music/kiravale-medieval-music-593694.mp3" id="12_2hr0s"]
+[ext_resource type="Script" uid="uid://dfdjm0yp35igu" path="res://Fases/area_nova_fase.gd" id="13_b7yet"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0tn5y"]
 size = Vector2(20, 172)
@@ -1109,6 +1111,9 @@ sources/2 = SubResource("TileSetAtlasSource_0tn5y")
 sources/5 = SubResource("TileSetAtlasSource_b7yet")
 sources/6 = SubResource("TileSetAtlasSource_du4t7")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lxfoi"]
+size = Vector2(35, 20)
+
 [node name="village" type="Node2D" unique_id=2137828852]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=521730097]
@@ -1223,3 +1228,19 @@ z_index = 1
 position = Vector2(77, 92)
 scale = Vector2(1.0448508, 0.93906254)
 texture = ExtResource("7_0tn5y")
+
+[node name="musicvilla" type="AudioStreamPlayer" parent="." unique_id=1558845236]
+stream = ExtResource("12_2hr0s")
+volume_db = -19.549
+autoplay = true
+parameters/looping = true
+
+[node name="area nova fase" type="Area2D" parent="." unique_id=1333998986]
+position = Vector2(638, 81)
+script = ExtResource("13_b7yet")
+proxima_fase = "uid://ciiyh0pw3kqe0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="area nova fase" unique_id=1405706459]
+z_index = 10
+position = Vector2(-3, 29)
+shape = SubResource("RectangleShape2D_lxfoi")
