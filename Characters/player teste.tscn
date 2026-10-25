@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://cgmo5b0c6yji3"]
 
+<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://bqf8hpoekw3hk" path="res://Characters/player.gd" id="1_yuyor"]
 [ext_resource type="Texture2D" uid="uid://cu12nm87yssfm" path="res://Assets/Protagonista/ATTACK 1.png" id="2_pdihk"]
 [ext_resource type="Texture2D" uid="uid://blseqw1wd66ov" path="res://Assets/Protagonista/IDLE.png" id="2_weact"]
@@ -9,6 +10,12 @@
 [ext_resource type="Texture2D" uid="uid://dibop6bbi5636" path="res://Assets/Protagonista/JUMP-TRANSITION.png" id="5_asujd"]
 [ext_resource type="Script" uid="uid://dev4die37qtwm" path="res://Scripts2/hitbox.gd" id="6_ca386"]
 [ext_resource type="Texture2D" uid="uid://c43itr8h57u" path="res://Assets/Protagonista/RUN.png" id="7_weact"]
+=======
+[ext_resource type="Script" uid="uid://dbdtrrwaku2wk" path="res://Scripts/Movimento teste.gd" id="1_morkk"]
+[ext_resource type="Texture2D" uid="uid://bgqkd8sdm8a48" path="res://Assets/Soldier/Soldier_Attack01.png" id="2_morkk"]
+[ext_resource type="Texture2D" uid="uid://cjf2brf1kp3oi" path="res://Assets/Soldier/Soldier_Idle.png" id="3_ca386"]
+[ext_resource type="Texture2D" uid="uid://b2wsrrlo5cpys" path="res://Assets/Soldier/Soldier_Walk.png" id="4_44imm"]
+>>>>>>> 3285a06152727e68e120165a0d3f88782ea2557a
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xub41"]
 atlas = ExtResource("2_pdihk")
@@ -319,6 +326,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gc4fq"]
 size = Vector2(10.125, 19)
 
+<<<<<<< HEAD
 [sub_resource type="Resource" id="Resource_jdbck"]
 script = ExtResource("3_hwrfq")
 critical_chance = 0.0
@@ -329,6 +337,9 @@ metadata/_custom_type_script = "uid://cftay0dh721jk"
 size = Vector2(13.375, 17.625)
 
 [node name="Player" type="CharacterBody2D" unique_id=2131732850]
+=======
+[node name="You" type="CharacterBody2D" unique_id=2131732850 groups=["player"]]
+>>>>>>> 3285a06152727e68e120165a0d3f88782ea2557a
 top_level = true
 z_index = 10
 script = ExtResource("1_yuyor")
@@ -340,9 +351,18 @@ sprite_frames = SubResource("SpriteFrames_p8jxx")
 animation = &"walk"
 frame_progress = 0.44319457
 
+<<<<<<< HEAD
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1413230819]
 position = Vector2(-1, 2)
 shape = SubResource("RectangleShape2D_gc4fq")
+=======
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=869960685]
+position = Vector2(-3, 0)
+sprite_frames = SubResource("SpriteFrames_1wu55")
+animation = &"attack"
+frame = 5
+frame_progress = 1.0
+>>>>>>> 3285a06152727e68e120165a0d3f88782ea2557a
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1924999652 node_paths=PackedStringArray("attacker")]
 collision_layer = 4
