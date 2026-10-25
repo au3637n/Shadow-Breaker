@@ -1,14 +1,15 @@
 [gd_scene format=4 uid="uid://jd7jmk6w6ppy"]
 
-[ext_resource type="PackedScene" uid="uid://cgmo5b0c6yji3" path="res://Characters/player teste.tscn" id="3_1jg4h"]
-[ext_resource type="Texture2D" uid="uid://cu72n5386m3fu" path="res://Assets/PumpkinManor_FreeSample_v1.0/PumpkinManor_FreeSample_v1.0/sheets/A_floors.png" id="3_bjqr6"]
-[ext_resource type="Texture2D" uid="uid://bn14eginicef8" path="res://Assets/Dirt-&-Grass-2D-Platform-Tileset_by_AxulArt/Dirt-&-Grass-2D-Platform-Tileset_by_AxulArt/grass tileset.png" id="3_qia1d"]
-[ext_resource type="PackedScene" uid="uid://dxcrmqg0gb30b" path="res://Characters/enemy teste.tscn" id="4_qia1d"]
-[ext_resource type="Texture2D" uid="uid://5vdregikidp2" path="res://Assets/Clouds V2/Clouds V2.png" id="5_bjqr6"]
-[ext_resource type="Texture2D" uid="uid://bnrxn0b0br6t3" path="res://Assets/Céu.png" id="6_adu1l"]
-[ext_resource type="Texture2D" uid="uid://xamdaibmvrbl" path="res://Assets/dark brick (1).png" id="7_2x8jn"]
-[ext_resource type="PackedScene" uid="uid://c8xmv1jr3p2te" path="res://menu/menu_pausa.tscn" id="7_pkdox"]
-[ext_resource type="Texture2D" uid="uid://3v3tkhuj3doj" path="res://Assets/tileset.png" id="8_8qs5e"]
+[ext_resource type="PackedScene" uid="uid://dxcrmqg0gb30b" path="res://Characters/enemy teste.tscn" id="1_6j6mj"]
+[ext_resource type="PackedScene" uid="uid://cgmo5b0c6yji3" path="res://Characters/player teste.tscn" id="2_uwngj"]
+[ext_resource type="Texture2D" uid="uid://cu72n5386m3fu" path="res://Assets/PumpkinManor_FreeSample_v1.0/PumpkinManor_FreeSample_v1.0/sheets/A_floors.png" id="3_bnuyk"]
+[ext_resource type="Texture2D" uid="uid://bn14eginicef8" path="res://Assets/Dirt-&-Grass-2D-Platform-Tileset_by_AxulArt/Dirt-&-Grass-2D-Platform-Tileset_by_AxulArt/grass tileset.png" id="4_q4lyg"]
+[ext_resource type="Texture2D" uid="uid://5vdregikidp2" path="res://Assets/Clouds V2/Clouds V2.png" id="5_rbp2r"]
+[ext_resource type="Texture2D" uid="uid://bnrxn0b0br6t3" path="res://Assets/Céu.png" id="6_1rw3u"]
+[ext_resource type="Texture2D" uid="uid://xamdaibmvrbl" path="res://Assets/dark brick (1).png" id="7_tlk83"]
+[ext_resource type="Texture2D" uid="uid://3v3tkhuj3doj" path="res://Assets/tileset.png" id="8_ulvwi"]
+[ext_resource type="PackedScene" uid="uid://c8xmv1jr3p2te" path="res://menu/menu_pausa.tscn" id="9_fonfr"]
+[ext_resource type="AudioStream" uid="uid://db7jpr0vk80km" path="res://Audio/music/Fase-1-e-4.mp3.mp3" id="10_0heo7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7gv1"]
 size = Vector2(21, 173)
@@ -20,7 +21,7 @@ size = Vector2(302, 23)
 size = Vector2(25.5, 173.25)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_adu1l"]
-texture = ExtResource("3_bjqr6")
+texture = ExtResource("3_bnuyk")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -211,7 +212,7 @@ texture = ExtResource("3_bjqr6")
 15:11/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qia1d"]
-texture = ExtResource("3_qia1d")
+texture = ExtResource("4_q4lyg")
 8:0/0 = 0
 9:0/0 = 0
 10:0/0 = 0
@@ -378,7 +379,7 @@ texture = ExtResource("3_qia1d")
 23:7/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_pkdox"]
-texture = ExtResource("5_bjqr6")
+texture = ExtResource("5_rbp2r")
 0:0/size_in_atlas = Vector2i(5, 3)
 0:0/0 = 0
 5:1/size_in_atlas = Vector2i(3, 2)
@@ -387,13 +388,13 @@ texture = ExtResource("5_bjqr6")
 0:3/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nxcjc"]
-texture = ExtResource("6_adu1l")
+texture = ExtResource("6_1rw3u")
 0:33/size_in_atlas = Vector2i(40, 21)
 0:33/0 = 0
 0:33/0/z_index = -1
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7cvwd"]
-texture = ExtResource("7_2x8jn")
+texture = ExtResource("7_tlk83")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -453,7 +454,7 @@ sources/3 = SubResource("TileSetAtlasSource_nxcjc")
 sources/5 = SubResource("TileSetAtlasSource_7cvwd")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gnttn"]
-texture = ExtResource("8_8qs5e")
+texture = ExtResource("8_ulvwi")
 19:0/size_in_atlas = Vector2i(2, 3)
 19:0/0 = 0
 3:3/size_in_atlas = Vector2i(1, 2)
@@ -461,7 +462,7 @@ texture = ExtResource("8_8qs5e")
 5:5/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_bjqr6"]
-texture = ExtResource("3_qia1d")
+texture = ExtResource("4_q4lyg")
 8:0/0 = 0
 9:0/0 = 0
 10:0/0 = 0
@@ -638,7 +639,7 @@ texture = ExtResource("3_qia1d")
 23:7/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_83p43"]
-texture = ExtResource("7_2x8jn")
+texture = ExtResource("7_tlk83")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0
@@ -712,10 +713,10 @@ shape = SubResource("RectangleShape2D_b47ro")
 position = Vector2(313.75, 77.625)
 shape = SubResource("RectangleShape2D_324lg")
 
-[node name="enemy1" parent="." unique_id=2060417931 instance=ExtResource("4_qia1d")]
+[node name="enemy1" parent="." unique_id=2060417931 instance=ExtResource("1_6j6mj")]
 position = Vector2(258, 105)
 
-[node name="You" parent="." unique_id=2131732850 instance=ExtResource("3_1jg4h")]
+[node name="You" parent="." unique_id=2131732850 instance=ExtResource("2_uwngj")]
 position = Vector2(61, 102)
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="." unique_id=1337272473]
@@ -726,5 +727,11 @@ tile_set = SubResource("TileSet_1jg4h")
 tile_map_data = PackedByteArray("AAAOAAcAAQACAAEAAAANAAcAAQACAAEAAAAMAAcAAQACAAEAAAALAAcAAQACAAEAAAAKAAcAAQACAAEAAAAJAAcAAQACAAEAAAAIAAcAAQACAAEAAAAHAAcAAQACAAEAAAAGAAcAAQACAAEAAAAFAAcAAQACAAEAAAAEAAcAAQACAAEAAAADAAcAAQACAAEAAAACAAcAAQACAAEAAAABAAcAAQACAAEAAAAPAAcAAQACAAEAAAAQAAcAAQACAAEAAAARAAcAAQACAAEAAAAAAAcAAQABAAEAAAABAAgAAQACAAIAAAACAAgAAQACAAIAAAADAAgAAQACAAIAAAAEAAgAAQACAAIAAAAFAAgAAQACAAIAAAAGAAgAAQACAAIAAAAHAAgAAQACAAIAAAAIAAgAAQACAAIAAAAJAAgAAQACAAIAAAAKAAgAAQACAAIAAAALAAgAAQACAAIAAAAMAAgAAQACAAIAAAANAAgAAQACAAIAAAAOAAgAAQACAAIAAAAPAAgAAQACAAIAAAAQAAgAAQACAAIAAAARAAgAAQACAAIAAAAAAAgAAQABAAIAAAAAAAkAAQABAAMAAAARAAkAAQACAAMAAAAQAAkAAQACAAMAAAAPAAkAAQACAAMAAAAOAAkAAQACAAMAAAANAAkAAQACAAMAAAAMAAkAAQACAAMAAAALAAkAAQACAAMAAAAKAAkAAQACAAMAAAAJAAkAAQACAAMAAAAIAAkAAQACAAMAAAAHAAkAAQACAAMAAAAGAAkAAQACAAMAAAAFAAkAAQACAAMAAAAEAAkAAQACAAMAAAADAAkAAQACAAMAAAACAAkAAQACAAMAAAABAAkAAQACAAMAAAAGAAUAAQACAAQAAAAHAAUAAQADAAQAAAAFAAUAAQABAAQAAAASAAcAAQACAAEAAAASAAgAAQACAAIAAAASAAkAAQACAAMAAAATAAcAAQADAAEAAAATAAgAAQADAAIAAAATAAkAAQADAAMAAAAJAAQAAQABAAQAAAAKAAQAAQADAAQAAAACAAYAAQAFAAYAAAABAAYAAQAFAAYAAAAIAAYAAQAFAAYAAAAMAAYAAQAFAAYAAAASAAYAAQAFAAYAAAATAAYAAQAFAAYAAAAKAAMAAQAFAAUAAAAGAAQAAQAFAAUAAAAJAAYAAQAFAAUAAAABAAUAAQAFAAUAAAAQAAUAAAATAAAAAAAPAAMAAAADAAMAAAARAAMAAAADAAMAAAAQAAIAAwABAAEAAAA=")
 tile_set = SubResource("TileSet_32cle")
 
-[node name="Menu_Pausa" parent="." unique_id=820098720 instance=ExtResource("7_pkdox")]
+[node name="Menu_Pausa" parent="." unique_id=820098720 instance=ExtResource("9_fonfr")]
 visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1068406674]
+stream = ExtResource("10_0heo7")
+volume_db = -16.639
+autoplay = true
+parameters/looping = true
