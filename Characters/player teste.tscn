@@ -317,7 +317,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gc4fq"]
-size = Vector2(10.125, 19)
+size = Vector2(11.0625, 21)
 
 [sub_resource type="Resource" id="Resource_jdbck"]
 script = ExtResource("3_hwrfq")
@@ -328,7 +328,7 @@ metadata/_custom_type_script = "uid://cftay0dh721jk"
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sdtv6"]
 size = Vector2(13.375, 17.625)
 
-[node name="Player" type="CharacterBody2D" unique_id=2131732850]
+[node name="Player" type="CharacterBody2D" unique_id=2131732850 groups=["player"]]
 top_level = true
 z_index = 10
 script = ExtResource("1_yuyor")
@@ -341,7 +341,7 @@ animation = &"walk"
 frame_progress = 0.44319457
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1413230819]
-position = Vector2(-1, 2)
+position = Vector2(-1.46875, 2.5)
 shape = SubResource("RectangleShape2D_gc4fq")
 
 [node name="Hitbox" type="Area2D" parent="." unique_id=1924999652 node_paths=PackedStringArray("attacker")]
