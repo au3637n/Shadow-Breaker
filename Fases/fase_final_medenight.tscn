@@ -6,7 +6,6 @@
 [ext_resource type="PackedScene" uid="uid://cgmo5b0c6yji3" path="res://Characters/player teste.tscn" id="4_1e4u0"]
 [ext_resource type="PackedScene" uid="uid://c8xmv1jr3p2te" path="res://menu/menu_pausa.tscn" id="5_02xmu"]
 [ext_resource type="AudioStream" uid="uid://ie1akrnky81b" path="res://Audio/music/Fase-5.mp3.mp3" id="6_3xtnj"]
-[ext_resource type="PackedScene" uid="uid://cbjafb6uw487o" path="res://Fases/area_2d.tscn" id="7_5rkcn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sbujv"]
 size = Vector2(21, 177)
@@ -544,8 +543,3 @@ stream = ExtResource("6_3xtnj")
 volume_db = -7.038
 autoplay = true
 parameters/looping = true
-
-[node name="door" parent="." unique_id=1202407928 instance=ExtResource("7_5rkcn")]
-z_index = 1
-position = Vector2(24, 107)
-next_level = "res://Fases/fase_1_paladino.tscn"

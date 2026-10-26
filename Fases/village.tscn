@@ -12,7 +12,7 @@
 [ext_resource type="Texture2D" uid="uid://ki62pvm3hxj1" path="res://Assets/casa2.png" id="7_f0r72"]
 [ext_resource type="Texture2D" uid="uid://xs31eeqjap0y" path="res://Assets/arvore vila.png" id="8_f0r72"]
 [ext_resource type="AudioStream" uid="uid://dcchluvmh2qli" path="res://Audio/music/kiravale-medieval-music-593694.mp3" id="12_2hr0s"]
-[ext_resource type="Script" uid="uid://dfdjm0yp35igu" path="res://Fases/area_nova_fase.gd" id="13_b7yet"]
+[ext_resource type="Script" uid="uid://knl4kbker7np" path="res://Scripts/porta.gd" id="14_0fxq2"]
 [ext_resource type="PackedScene" uid="uid://c8xmv1jr3p2te" path="res://menu/menu_pausa.tscn" id="14_du4t7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0tn5y"]
@@ -1112,8 +1112,8 @@ sources/2 = SubResource("TileSetAtlasSource_0tn5y")
 sources/5 = SubResource("TileSetAtlasSource_b7yet")
 sources/6 = SubResource("TileSetAtlasSource_du4t7")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_lxfoi"]
-size = Vector2(35, 20)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_32cle"]
+size = Vector2(6.5, 73.25)
 
 [node name="village" type="Node2D" unique_id=2137828852]
 
@@ -1236,14 +1236,13 @@ volume_db = -19.549
 autoplay = true
 parameters/looping = true
 
-[node name="area nova fase" type="Area2D" parent="." unique_id=1333998986]
-position = Vector2(638, 81)
-script = ExtResource("13_b7yet")
-proxima_fase = "uid://ciiyh0pw3kqe0"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="area nova fase" unique_id=1405706459]
-z_index = 10
-position = Vector2(-3, 29)
-shape = SubResource("RectangleShape2D_lxfoi")
-
 [node name="Menu_Pausa" parent="." unique_id=820098720 instance=ExtResource("14_du4t7")]
+
+[node name="porta1" type="Area2D" parent="." unique_id=136052359]
+script = ExtResource("14_0fxq2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="porta1" unique_id=634838822]
+position = Vector2(529, 90)
+shape = SubResource("RectangleShape2D_32cle")
+
+[connection signal="body_entered" from="porta1" to="porta1" method="_on_body_entered"]

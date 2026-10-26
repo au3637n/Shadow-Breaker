@@ -13,7 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://cvnmo547kwxow" path="res://Assets/casa1.png" id="9_rbp2r"]
 [ext_resource type="AudioStream" uid="uid://db7jpr0vk80km" path="res://Audio/music/Fase-1-e-4.mp3.mp3" id="10_0heo7"]
 [ext_resource type="Texture2D" uid="uid://brlpa4bufaiyv" path="res://Assets/TX Village Props.png" id="10_q4lyg"]
-[ext_resource type="PackedScene" uid="uid://cbjafb6uw487o" path="res://Fases/area_2d.tscn" id="11_uwngj"]
+[ext_resource type="Script" uid="uid://bt0jnvmw4nkc5" path="res://Scripts/porta2.gd" id="14_rbp2r"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n7gv1"]
 size = Vector2(21, 173)
@@ -1463,6 +1463,9 @@ physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_q4lyg")
 sources/1 = SubResource("TileSetAtlasSource_rbp2r")
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1rw3u"]
+size = Vector2(5, 34)
+
 [node name="fase1" type="Node2D" unique_id=1505274550]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=747132888]
@@ -1506,6 +1509,11 @@ volume_db = -16.639
 autoplay = true
 parameters/looping = true
 
-[node name="door" parent="." unique_id=1202407928 instance=ExtResource("11_uwngj")]
-position = Vector2(263, 92)
-next_level = "res://Fases/fase_final_medenight.tscn"
+[node name="porta2" type="Area2D" parent="." unique_id=904767877]
+script = ExtResource("14_rbp2r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="porta2" unique_id=580931725]
+position = Vector2(264, 94)
+shape = SubResource("RectangleShape2D_1rw3u")
+
+[connection signal="body_entered" from="porta2" to="porta2" method="_on_body_entered"]
