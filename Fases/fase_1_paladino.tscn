@@ -1474,6 +1474,9 @@ font_size = 10
 
 [node name="fase1" type="Node2D" unique_id=1505274550]
 
+[node name="enemy1" parent="." unique_id=2060417931 instance=ExtResource("1_6j6mj")]
+position = Vector2(242, 106)
+
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=747132888]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1759546253]
@@ -1487,9 +1490,6 @@ shape = SubResource("RectangleShape2D_b47ro")
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=658141513]
 position = Vector2(313.75, 77.625)
 shape = SubResource("RectangleShape2D_324lg")
-
-[node name="enemy1" parent="." unique_id=2060417931 instance=ExtResource("1_6j6mj")]
-position = Vector2(258, 105)
 
 [node name="You" parent="." unique_id=2131732850 instance=ExtResource("2_uwngj")]
 position = Vector2(61, 98)

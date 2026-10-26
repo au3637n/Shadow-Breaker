@@ -355,5 +355,6 @@ attacker = NodePath("..")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=212571473]
 position = Vector2(11, 0)
 shape = SubResource("RectangleShape2D_sdtv6")
+debug_color = Color(0.17499927, 0.62663174, 0.42645192, 0.41960785)
 
 [connection signal="animation_finished" from="AnimatedSprite2D" to="." method="_on_animated_sprite_2d_animation_finished"]
