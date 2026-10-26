@@ -14,6 +14,8 @@
 [ext_resource type="AudioStream" uid="uid://dcchluvmh2qli" path="res://Audio/music/kiravale-medieval-music-593694.mp3" id="12_2hr0s"]
 [ext_resource type="Script" uid="uid://knl4kbker7np" path="res://Scripts/porta.gd" id="14_0fxq2"]
 [ext_resource type="PackedScene" uid="uid://c8xmv1jr3p2te" path="res://menu/menu_pausa.tscn" id="14_du4t7"]
+[ext_resource type="FontFile" uid="uid://1exjblxcjttt" path="res://menu/IcelandWinterstorm_PERSONAL_USE_ONLY.otf" id="16_42m55"]
+[ext_resource type="Script" uid="uid://8o5h6qts7ysy" path="res://Scripts/dialogue_area.gd" id="17_42m55"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0tn5y"]
 size = Vector2(20, 172)
@@ -1115,6 +1117,13 @@ sources/6 = SubResource("TileSetAtlasSource_du4t7")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_32cle"]
 size = Vector2(6.5, 73.25)
 
+[sub_resource type="LabelSettings" id="LabelSettings_gh1ik"]
+font = ExtResource("16_42m55")
+font_size = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gh1ik"]
+size = Vector2(12.5, 32)
+
 [node name="village" type="Node2D" unique_id=2137828852]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=521730097]
@@ -1244,5 +1253,67 @@ script = ExtResource("14_0fxq2")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="porta1" unique_id=634838822]
 position = Vector2(529, 90)
 shape = SubResource("RectangleShape2D_32cle")
+
+[node name="DialogueBox" type="Control" parent="." unique_id=539552601]
+custom_minimum_size = Vector2(0, 160)
+custom_maximum_size = Vector2(20, 0)
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 150.0
+offset_right = 150.0
+grow_horizontal = 2
+
+[node name="ColorRect" type="ColorRect" parent="DialogueBox" unique_id=207364905]
+layout_mode = 0
+offset_left = -140.0
+offset_right = 83.0
+offset_bottom = 26.0
+color = Color(0.46223295, 0.2707321, 0, 1)
+
+[node name="DialogueText" type="Label" parent="DialogueBox" unique_id=1115945966]
+layout_mode = 0
+offset_left = -137.0
+offset_right = 102.0
+offset_bottom = 23.0
+text = " Olá guerreiro. Vocè acaba de falar com o seu Rei e descobre que a filha dele
+foi raptada pelo reino vizinho. Agora vocè precisa resgata-lá  ! ! !"
+label_settings = SubResource("LabelSettings_gh1ik")
+
+[node name="dialogue_area" type="Area2D" parent="." unique_id=1328539511]
+script = ExtResource("17_42m55")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="dialogue_area" unique_id=1198771011]
+position = Vector2(476.75, 111)
+shape = SubResource("RectangleShape2D_gh1ik")
+
+[node name="DialogueBox" type="Control" parent="dialogue_area" unique_id=1469959912]
+custom_minimum_size = Vector2(0, 160)
+custom_maximum_size = Vector2(20, 0)
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = 533.0
+offset_top = 70.0
+offset_right = 533.0
+offset_bottom = 70.0
+grow_horizontal = 2
+
+[node name="ColorRect" type="ColorRect" parent="dialogue_area/DialogueBox" unique_id=446694339]
+layout_mode = 0
+offset_left = -229.0
+offset_top = -69.0
+offset_right = -65.0
+offset_bottom = -53.0
+color = Color(0.46223295, 0.2707321, 0, 1)
+
+[node name="DialogueText" type="Label" parent="dialogue_area/DialogueBox" unique_id=1081530011]
+layout_mode = 0
+offset_left = -226.0
+offset_top = -68.0
+offset_right = -55.0
+offset_bottom = -45.0
+text = "Aqui está, vamos seguir em frente para entrar no castelo."
+label_settings = SubResource("LabelSettings_gh1ik")
 
 [connection signal="body_entered" from="porta1" to="porta1" method="_on_body_entered"]

@@ -6,6 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://cgmo5b0c6yji3" path="res://Characters/player teste.tscn" id="4_1e4u0"]
 [ext_resource type="PackedScene" uid="uid://c8xmv1jr3p2te" path="res://menu/menu_pausa.tscn" id="5_02xmu"]
 [ext_resource type="AudioStream" uid="uid://ie1akrnky81b" path="res://Audio/music/Fase-5.mp3.mp3" id="6_3xtnj"]
+[ext_resource type="Script" uid="uid://dcem7x01u2s4o" path="res://Scripts/dialogue_manager.gd" id="7_4h42q"]
+[ext_resource type="FontFile" uid="uid://1exjblxcjttt" path="res://menu/IcelandWinterstorm_PERSONAL_USE_ONLY.otf" id="8_26hrn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sbujv"]
 size = Vector2(21, 177)
@@ -503,6 +505,10 @@ sources/0 = SubResource("TileSetAtlasSource_4podw")
 sources/1 = SubResource("TileSetAtlasSource_sbujv")
 sources/4 = SubResource("TileSetAtlasSource_5rkcn")
 
+[sub_resource type="LabelSettings" id="LabelSettings_k5qsn"]
+font = ExtResource("8_26hrn")
+font_size = 10
+
 [node name="Node2D" type="Node2D" unique_id=556467607]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1494984958]
@@ -543,3 +549,31 @@ stream = ExtResource("6_3xtnj")
 volume_db = -7.038
 autoplay = true
 parameters/looping = true
+
+[node name="DialogueManager" type="CanvasLayer" parent="." unique_id=1787705757]
+process_mode = 3
+script = ExtResource("7_4h42q")
+
+[node name="DialogueBox" type="Control" parent="DialogueManager" unique_id=1562499901]
+custom_minimum_size = Vector2(0, 160)
+custom_maximum_size = Vector2(20, 0)
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="ColorRect" type="ColorRect" parent="DialogueManager/DialogueBox" unique_id=1686117027]
+layout_mode = 0
+offset_left = -140.0
+offset_right = 39.0
+offset_bottom = 26.0
+color = Color(0.46223295, 0.2707321, 0, 1)
+
+[node name="DialogueText" type="Label" parent="DialogueManager/DialogueBox" unique_id=1663007435]
+layout_mode = 0
+offset_left = -137.0
+offset_right = 38.0
+offset_bottom = 23.0
+text = "Vocè achou ele, o cavaleiro e rei sombrio que raptou a princesa. 
+Derrote-o e salve a princesa ! ! !"
+label_settings = SubResource("LabelSettings_k5qsn")
