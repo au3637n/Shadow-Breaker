@@ -6,6 +6,7 @@ extends CharacterBody2D
 
 var start_x: float
 var direction: float = 1.0
+var player: CharacterBody2D = null
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -50,3 +51,9 @@ func _physics_process(delta: float) -> void:
 
 	# Animação
 	sprite.play("walk")
+
+
+func _on_detection_area_body_entered(body: Node2D) -> void:
+	if body.is_in_group("player") and body is CharacterBody2D:
+		player = body
+		print("Jogador detectado!")

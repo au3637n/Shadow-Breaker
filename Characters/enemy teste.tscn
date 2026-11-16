@@ -252,8 +252,8 @@ size = Vector2(6.5625, 14.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_s1ctu"]
 size = Vector2(6.65625, 14.71875)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_gc4fq"]
-size = Vector2(292, 145.5)
+[sub_resource type="CircleShape2D" id="CircleShape2D_lymfa"]
+radius = 0.01
 
 [node name="enemy1" type="CharacterBody2D" unique_id=2060417931 groups=["enemy"]]
 top_level = true
@@ -283,7 +283,11 @@ shape = SubResource("RectangleShape2D_s1ctu")
 debug_color = Color(1, 0.20657763, 0.20854163, 0.41960785)
 
 [node name="DetectionArea" type="Area2D" parent="." unique_id=699929052]
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1286958017]
-position = Vector2(-110, -49.25)
-shape = SubResource("RectangleShape2D_gc4fq")
+position = Vector2(0, 1)
+shape = SubResource("CircleShape2D_lymfa")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]

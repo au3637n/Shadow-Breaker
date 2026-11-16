@@ -1248,6 +1248,7 @@ parameters/looping = true
 [node name="Menu_Pausa" parent="." unique_id=820098720 instance=ExtResource("14_du4t7")]
 
 [node name="porta1" type="Area2D" parent="." unique_id=136052359]
+collision_mask = 2
 script = ExtResource("14_0fxq2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="porta1" unique_id=634838822]

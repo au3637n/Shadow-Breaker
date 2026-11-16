@@ -331,6 +331,7 @@ size = Vector2(13.375, 17.625)
 [node name="Player" type="CharacterBody2D" unique_id=2131732850 groups=["player"]]
 top_level = true
 z_index = 10
+collision_layer = 2
 script = ExtResource("1_yuyor")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=409089545]
